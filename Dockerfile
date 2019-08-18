@@ -1,7 +1,7 @@
 FROM debian:9
 
 RUN apt-get update -y && \
-    apt-get install -y supervisor openssh-server tzdata vim&& \
+    apt-get install -y supervisor openssh-server git build-essential wget python-setuptools tzdata vim&& \
     apt-get autoclean && apt-get autoremove && \
     ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
     echo "Asia/Shanghai" > /etc/timezone
